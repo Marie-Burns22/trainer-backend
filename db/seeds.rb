@@ -9,3 +9,5 @@
 client = Client.create(name: "Joy", email: "Joy@joy.com", password: "joy")
 
 service = Service.create(name: "Individual session", category: "private lessons", price: 40, request_method: "Book")
+
+booking = Booking.create(client_id: 1, service_id: 1, day: "Monday", time: 10)
