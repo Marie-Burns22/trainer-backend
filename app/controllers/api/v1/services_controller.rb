@@ -10,7 +10,9 @@ class Api::V1::ServicesController < ApplicationController
 
   # GET /services/1
   def show
-    render json: @service
+    # render json: @service
+    service_json = ServiceSerializer.new(@service).serialized_json
+    render json: service_json
   end
 
   # POST /services

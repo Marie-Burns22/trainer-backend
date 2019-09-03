@@ -6,3 +6,4 @@ class Service < ApplicationRecord
     validates_inclusion_of :request_method, :in => ['Email us', 'Book', 'Request' ]
 
 end
+# TODO write method to sum income from all booking for each service

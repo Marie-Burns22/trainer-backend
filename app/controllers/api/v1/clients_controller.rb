@@ -10,7 +10,9 @@ class Api::V1::ClientsController < ApplicationController
 
   # GET /clients/1
   def show
-    render json: @client
+    # render json: @client
+    client_json = ClientSerializer.new(@client).serialized_json
+    render json: client_json
   end
 
   # POST /clients
