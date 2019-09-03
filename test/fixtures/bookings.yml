@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-09-03
+  time: 2019-09-03 12:31:20
+  client_id: 1
+  service_id: 1
+
+two:
+  date: 2019-09-03
+  time: 2019-09-03 12:31:20
+  client_id: 1
+  service_id: 1

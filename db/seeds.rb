@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+client = Client.create(name: "Joy", email: "Joy@joy.com", password: "joy")
+
+service = Service.create(name: "Individual session", category: "private lessons", price: 40, request_method: "Book")
