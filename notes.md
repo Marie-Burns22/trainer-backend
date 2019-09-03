@@ -1,34 +1,34 @@
 # Models 
 ## Service Model
 ### Relationships
-    has_many :clients
-    belongs_to :teacher
+    has_many :clients -v1
+    belongs_to :teacher - v2 
 ### Attributes
-    :name - string, 
-    :category - string, 
-    :price - integer, 
-    :request_method - string, 
+    :name - string,  - v1
+    :category - string,  - v1
+    :price - integer,  -v1
+    :request_method - string,  -v1 
     :client_ids, 
-    :teacher_id - integer 
+    :teacher_id - integer  - v2
 
 
 ## Client Model
 ### Relationships
-    has_many :services
-    has_many :teachers through 
+    has_many :services -v1
+    has_many :teachers through -v2
 ### Attributes
-    :name - string, 
-    :password_digest, 
-    :email - string
+    :name - string,  -v1
+    :password_digest, -v1
+    :email - string -v1
 
 ## Teacher Model (Admin) - MAYBE OPTIONAL for first project build
 ### Relationships
-    has_many :services
-    has_many :clients through services
+    has_many :services -v2
+    has_many :clients through services -v2
 
 ### Attributes
-    :id
-    :name
+    :id -v2
+    :name -v2
 
 # What does the app do?
 The app will list available services that clients and signup for or request additional information
