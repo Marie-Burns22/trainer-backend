@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+    get "/api/v1/login", to: "sessions#create"
   
   # API namespacing shoud eventually match Aileen's purchased domain??  
   namespace :api do
