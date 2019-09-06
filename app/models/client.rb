@@ -2,7 +2,7 @@ class Client < ApplicationRecord
     has_many :bookings
     has_many :services, through: :bookings
 
-    validates :name, :email presence: true 
+    validates :name, :email, presence: true 
     validates :email, uniqueness: true
     
     has_secure_password
