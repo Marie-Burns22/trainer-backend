@@ -13,5 +13,9 @@ class Api::V1::SessionsController < ApplicationController
     end
 
     def destroy
+        session.clear
+        render json: {
+            message: "Logged out"
+        }
     end
 end
