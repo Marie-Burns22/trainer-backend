@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::API
 
         def current_client
-        # mock hard coded version. Fix once there are more users.
-            Client.first
+            Client.find(session[:client_id])
         end
 
         def logged_in?
