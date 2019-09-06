@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 client = Client.create(name: "Joy", email: "Joy@joy.com", password: "joy")
+x = Client.create(name: "x", email: "x@x.x", password: 'x')
 
 service = Service.create(name: "Individual session", category: "private lessons", price: 40, request_method: "Book")
 
