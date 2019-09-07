@@ -4,15 +4,12 @@ class Api::V1::ClientsController < ApplicationController
   # GET /clients
   def index
     @clients = Client.all
-
-    render json: @clients
+    render json: ClientSerializer.new(@clients)
   end
 
   # GET /clients/1
   def show
-    # render json: @client
-    client_json = ClientSerializer.new(@client).serialized_json
-    render json: client_json
+    render json: ClientSerializer.new(@client).serialized_json
   end
 
   # POST /clients

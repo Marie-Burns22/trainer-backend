@@ -1,3 +1,14 @@
+#Current TODO List
+    *Pass props to bookings and booking
+    * Add custom serializer method to access attributes of belongs_to and has_many relationships
+    *Add form to create booking
+        *Form in BookingForm component
+        * Save to store and api (fetch request)
+    
+
+
+
+
 # Models 
 ## Service Model
 ### Relationships
@@ -43,4 +54,4 @@ The app will list available services that clients and signup for or request addi
     - can add services to shopping cart
     - stretch goal: can leave review
     -stretch goal: can schedule time and date for service
--
+

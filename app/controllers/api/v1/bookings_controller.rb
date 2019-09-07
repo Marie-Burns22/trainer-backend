@@ -4,15 +4,12 @@ class Api::V1::BookingsController < ApplicationController
   # GET /bookings
   def index
     @bookings = Booking.all
-
-    render json: @bookings
+    render json: BookingSerializer.new(@bookings)
   end
 
   # GET /bookings/1
   def show
-    # render json: @booking
-    booking_json = BookingSerializer.new(@booking).serialized_json
-    render json: booking_json
+    render json: BookingSerializer.new(@booking).serialized_json
   end
 
   # POST /bookings
