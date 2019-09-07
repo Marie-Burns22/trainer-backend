@@ -1,7 +1,6 @@
 class ClientSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :email, :bookings
-  has_many :bookings
-
+  attributes :name, :email
+  has_many :bookings, serializer: BookingSerializer
 
 end

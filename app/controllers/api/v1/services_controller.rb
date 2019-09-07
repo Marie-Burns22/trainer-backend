@@ -4,8 +4,8 @@ class Api::V1::ServicesController < ApplicationController
   # GET /services
   def index
     @services = Service.all
-    services_json = ServiceSerializer.new(@services).serialized_json
-    render json: services_json
+    # services_json = ServiceSerializer.new(@services).serialized_json
+    render json: ServiceSerializer.new(@services)
   end
 
   # GET /services/1
