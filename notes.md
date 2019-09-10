@@ -1,8 +1,8 @@
 #Current TODO List
-    *Pass props to bookings and booking
+
     * Add custom serializer method to access attributes of belongs_to and has_many relationships
-    *Add form to create booking
-        *Form in BookingForm component
+    *Add form to create services
+        *Form in ServiceForm component
         * Save to store and api (fetch request)
     
 

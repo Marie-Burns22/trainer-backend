@@ -4,7 +4,7 @@ class Api::V1::ServicesController < ApplicationController
   # GET /services
   def index
     @services = Service.all
-    render json: ServiceSerializer.new(@services)
+    render json: ServiceSerializer.new(@services).serialized_json
   end
 
   # GET /services/1
@@ -15,11 +15,10 @@ class Api::V1::ServicesController < ApplicationController
   # POST /services
   def create
     @service = Service.new(service_params)
-
     if @service.save
-      render json: @service, status: :created, location: @service
+      render json: ServiceSerializer.new(@service).serialized_json
     else
-      render json: @service.errors, status: :unprocessable_entity
+      render json: {error: "Error creating service"}
     end
   end
 
