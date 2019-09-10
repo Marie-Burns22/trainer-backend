@@ -11,13 +11,12 @@
     * Persist to API
         *action creator
         *reducer/store
-    * Create dropdown menu for service
     * Research how to add day and time choices
     * Add validations to backend
     * Research how to use a current_client method from client model (or sessions) to fill in client in the form
 
 ### Routes
-    *Add booking routes
+    *Add booking routes for individual bookings.
     *Add sign up, login, log out routes
 
 
@@ -44,7 +43,7 @@
     :name - string,  - v1
     :category - string,  - v1
     :price - integer,  -v1
-    :request_method - string,  -v1 
+    :request_method - string,  -v2
     :client_ids, 
     :teacher_id - integer  - v2
 

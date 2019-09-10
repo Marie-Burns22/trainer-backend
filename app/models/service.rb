@@ -3,7 +3,7 @@ class Service < ApplicationRecord
     has_many :clients, through: :bookings
 
     validates :name, presence: true
-    validates_inclusion_of :request_method, :in => ['Email us', 'Book', 'Request' ]
+
 
 end
 # TODO write method to sum income from all booking for each service
