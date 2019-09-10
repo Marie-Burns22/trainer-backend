@@ -1,10 +1,36 @@
 #Current TODO List
 
+### Serializer
     * Add custom serializer method to access attributes of belongs_to and has_many relationships
-    *Add form to create services
-        *Form in ServiceForm component
-        * Save to store and api (fetch request)
-    
+
+### Services Form
+    * Create dropdown menu for category and request method
+    * Format for price as $ rather than string
+
+### Booking Form
+    * Persist to API
+        *action creator
+        *reducer/store
+    * Create dropdown menu for service
+    * Research how to add day and time choices
+    * Add validations to backend
+    * Research how to use a current_client method from client model (or sessions) to fill in client in the form
+
+### Routes
+    *Add booking routes
+    *Add sign up, login, log out routes
+
+
+### Sign up Form
+    * Create Form
+    * Persist to API
+
+### Login Form
+    * Use to get current user
+
+### NavBar
+    *Sign up, login, log out buttons visible based on if the client is signed in
+
 
 
 
