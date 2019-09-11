@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get "/api/v1/login", to: "sessions#create"
-  post '/api/v1/login', to: 'sessions#create'
-  delete '/api/v1/logout', to: 'sessions#destroy'
-  get '/api/v1/get_current_user', to: 'sessions#get_current_user'
+  # get "/api/v1/login", to: "/api/v1/sessions#create"
+  post '/api/v1/login', to: 'api/v1/sessions#create'
+  # delete '/api/v1/logout', to: 'sessions#destroy'
+  # get '/api/v1/get_current_client', to: 'sessions#get_current_client'
    
   # API namespacing shoud eventually match Aileen's purchased domain??  
   namespace :api do

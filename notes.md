@@ -25,7 +25,7 @@
     * Persist to API
 
 ### Login Form
-    * Use to get current user
+    * Use to get current client
 
 ### NavBar
     *Sign up, login, log out buttons visible based on if the client is signed in
