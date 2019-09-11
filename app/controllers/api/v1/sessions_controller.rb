@@ -3,8 +3,9 @@ class Api::V1::SessionsController < ApplicationController
     def create
         @client = Client.find_by(email: params[:session][:email])
         if @client && @client.authenticate(params[:session][:password])
-            session[:client_id] = @client.client_id
-            render json: @client 
+            # binding.pry
+            session[:client_id] = @client.id
+            render json: ClientSerializer.new(@client).serialized_json 
         else
             render json: {
                 error: "Invalid Credentials"
@@ -14,7 +15,7 @@ class Api::V1::SessionsController < ApplicationController
 
     def get_current_client
         if logged_in?
-            render json: current_user 
+            render json: ClientSerializer.new(current_client).serialized_json 
         else
             render json: {
                 error: "No one logged in"
