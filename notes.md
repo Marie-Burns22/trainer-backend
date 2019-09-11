@@ -4,11 +4,11 @@
     * Add custom serializer method to access attributes of belongs_to and has_many relationships
 
 ### Services Form
-    * Create dropdown menu for category and request method
+
     * Format for price as $ rather than string
 
 ### Booking Form
-    * Persist to API
+    * Persist to API  - does not work now
         *action creator
         *reducer/store
     * Research how to add day and time choices
