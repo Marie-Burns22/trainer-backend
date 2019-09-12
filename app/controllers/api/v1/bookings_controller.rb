@@ -3,7 +3,8 @@ class Api::V1::BookingsController < ApplicationController
 
   # GET /bookings
   def index
-    @bookings = Booking.all
+    @bookings = current_client.bookings
+    binding.pry
     render json: BookingSerializer.new(@bookings)
   end
 

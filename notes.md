@@ -4,7 +4,6 @@
     * Add custom serializer method to access attributes of belongs_to and has_many relationships
 
 ### Services Form
-
     * Format for price as $ rather than string
 
 ### Booking Form
@@ -17,15 +16,10 @@
 
 ### Routes
     *Add booking routes for individual bookings.
-    *Add sign up, login, log out routes
-
 
 ### Sign up Form
     * Create Form
     * Persist to API
-
-### Login Form
-    * Use to get current client
 
 ### NavBar
     *Sign up, login, log out buttons visible based on if the client is signed in
