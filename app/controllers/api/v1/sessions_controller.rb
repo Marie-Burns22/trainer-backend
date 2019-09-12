@@ -3,7 +3,7 @@ class Api::V1::SessionsController < ApplicationController
     def create
         @client = Client.find_by(email: params[:session][:email])
         if @client && @client.authenticate(params[:session][:password])
-            # binding.pry
+
             session[:client_id] = @client.id
             render json: ClientSerializer.new(@client).serialized_json 
         else
@@ -27,6 +27,6 @@ class Api::V1::SessionsController < ApplicationController
         session.clear
         render json: {
             notice: "successfully logged out"
-        }, status: ok
+        }
     end
 end

@@ -3,9 +3,14 @@ class Api::V1::BookingsController < ApplicationController
 
   # GET /bookings
   def index
-    @bookings = current_client.bookings
-    binding.pry
-    render json: BookingSerializer.new(@bookings)
+    if logged_in?
+      @bookings = current_client.bookings
+      render json: BookingSerializer.new(@bookings)
+    else
+      render json: {
+        error: "You must be logged in to view bookings"
+      }
+    end
   end
 
   # GET /bookings/1

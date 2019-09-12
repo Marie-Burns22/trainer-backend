@@ -4,7 +4,7 @@ class Api::V1::ClientsController < ApplicationController
   # GET /clients
   def index
     @clients = Client.all
-    render json: ClientSerializer.new(@clients)
+    render json: ClientSerializer.new(@clients).serialized_json
   end
 
   # GET /clients/1
@@ -17,25 +17,29 @@ class Api::V1::ClientsController < ApplicationController
     @client = Client.new(client_params)
 
     if @client.save
-      render json: @client, status: :created, location: @client
+      session[:client_id] = @client.id
+      render json: ClientSerializer.new(@client)
     else
+      resp = {
+        error: @client.errors.full_messages.to_sentence
+      }
       render json: @client.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /clients/1
-  def update
-    if @client.update(client_params)
-      render json: @client
-    else
-      render json: @client.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @client.update(client_params)
+  #     render json: @client
+  #   else
+  #     render json: @client.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /clients/1
-  def destroy
-    @client.destroy
-  end
+  # def destroy
+  #   @client.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -45,6 +49,6 @@ class Api::V1::ClientsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def client_params
-      params.require(:client).permit(:name, :email, :password_digest)
+      params.require(:client).permit(:name, :email, :password) #changed password_diget to password, but not sure if that is correct
     end
 end

@@ -1,4 +1,9 @@
 #Current TODO List
+###Thursday Todo:
+*Watch routes video with soccer teams to see how to split view
+*watch video to make signup page
+*Watch video to make bookings automatically use current client
+
 
 ### Serializer
     * Add custom serializer method to access attributes of belongs_to and has_many relationships
@@ -15,14 +20,15 @@
     * Research how to use a current_client method from client model (or sessions) to fill in client in the form
 
 ### Routes
-    *Add booking routes for individual bookings.
+    *Add booking routes for individual bookings. A client will click on an individual booking to see the details.
+    *When logout button is clicked, url should go back to homepage
 
 ### Sign up Form
-    * Create Form
+
     * Persist to API
 
 ### NavBar
-    *Sign up, login, log out buttons visible based on if the client is signed in
+
 
 
 
