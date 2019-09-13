@@ -1,8 +1,7 @@
-#Current TODO List
-###Thursday Todo:
-*Watch routes video with soccer teams to see how to split view
-*watch video to make signup page
-*Watch video to make bookings automatically use current client
+# Current TODO List
+### Thursday Todo:
+    * Watch routes video with soccer teams to see how to split view
+    * Watch video to make bookings automatically use current client
 
 
 ### Serializer
@@ -22,10 +21,6 @@
 ### Routes
     *Add booking routes for individual bookings. A client will click on an individual booking to see the details.
     *When logout button is clicked, url should go back to homepage
-
-### Sign up Form
-
-    * Persist to API
 
 ### NavBar
 

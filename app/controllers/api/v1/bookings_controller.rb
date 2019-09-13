@@ -1,6 +1,6 @@
 class Api::V1::BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :update, :destroy]
-
+  before_action :set_client, only: [:show, :index, :update, :create, :destroy]
   # GET /bookings
   def index
     if logged_in?
@@ -38,9 +38,9 @@ class Api::V1::BookingsController < ApplicationController
   end
 
   # DELETE /bookings/1
-  def destroy
-    @booking.destroy
-  end
+  # def destroy
+  #   @booking.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -51,5 +51,9 @@ class Api::V1::BookingsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def booking_params
       params.require(:booking).permit(:date, :time, :client_id, :service_id)
+    end
+
+    def set_client
+      @client = Client.find(params[:client_id])
     end
 end
