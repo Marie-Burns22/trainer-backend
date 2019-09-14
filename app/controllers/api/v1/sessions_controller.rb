@@ -16,10 +16,6 @@ class Api::V1::SessionsController < ApplicationController
     def get_current_client
         if logged_in?
             render json: ClientSerializer.new(current_client).serialized_json 
-        # else
-        #     render json: {
-        #         error: "No one logged in"
-        #     }
         end
     end
 
