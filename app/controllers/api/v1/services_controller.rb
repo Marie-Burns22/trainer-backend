@@ -34,6 +34,11 @@ class Api::V1::ServicesController < ApplicationController
 
   # DELETE /services/1
   def destroy
+
+    @service.bookings.each do |booking|
+      booking.destroy
+    end
+
     @service.destroy
     @services = Service.all
     render json: ServiceSerializer.new(@services).serialized_json
