@@ -17,6 +17,7 @@ class Api::V1::BookingsController < ApplicationController
   def create
     @client = current_client
     @booking = @client.bookings.new(booking_params)
+    # binding.pry
     if @client.save
       render json: ClientSerializer.new(@client).serialized_json
     else
@@ -46,7 +47,7 @@ class Api::V1::BookingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def booking_params
-      params.require(:booking).permit(:date, :time, :client_id, :service_id)
+      params.require(:booking).permit(:day, :time, :client_id, :service_id)
     end
 
     # def set_client
