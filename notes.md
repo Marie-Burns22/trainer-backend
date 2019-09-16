@@ -1,28 +1,22 @@
 # Current TODO List
-### Thursday Todo:
+### Monday Todo:
     * Watch routes video with soccer teams to see how to split view
-    * Watch video to make bookings automatically use current client
-
-
-### Serializer
-    * Add custom serializer method to access attributes of belongs_to and has_many relationships
 
 ### Services Form
     * Format for price as $ rather than string
 
 ### Booking Form
-    * Persist to API  - does not work now
-        *action creator
-        *reducer/store
     * Research how to add day and time choices
     * Add validations to backend
-    * Research how to use a current_client method from client model (or sessions) to fill in client in the form
 
 ### Routes
     *Add booking routes for individual bookings. A client will click on an individual booking to see the details.
-    *When logout button is clicked, url should go back to homepage
 
 ### NavBar
+    *Logout button should trigger fetch rather than a form
+
+# Office hours
+    *When do you have to use `this.handleChange.bind(this)` in the constructor?  Is this necessary only when there is a constructor? Why? 
 
 
 

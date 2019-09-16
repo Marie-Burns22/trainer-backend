@@ -33,9 +33,11 @@ class Api::V1::ServicesController < ApplicationController
   # end
 
   # DELETE /services/1
-  # def destroy
-  #   @service.destroy
-  # end
+  def destroy
+    @service.destroy
+    @services = Service.all
+    render json: ServiceSerializer.new(@services).serialized_json
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
