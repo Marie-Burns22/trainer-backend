@@ -1,6 +1,7 @@
 # Current TODO List
-### Monday Todo:
-    * Watch routes video with soccer teams to see how to split view
+### Tuesday Todo:
+    *Refactor Service and booking lifecycle and routing into containers
+   
 
 ### Services Form
     * Format for price as $ rather than string
@@ -9,14 +10,14 @@
     * Research how to add day and time choices
     * Add validations to backend
 
-### Routes
-    *Add booking routes for individual bookings. A client will click on an individual booking to see the details.
+
 
 ### NavBar
-    *Logout button should trigger fetch rather than a form
+    *Logout link needs to be tested and maybe fixed
 
 # Office hours
     *When do you have to use `this.handleChange.bind(this)` in the constructor?  Is this necessary only when there is a constructor? Why? 
+    *Routing and refreshing.
 
 
 
