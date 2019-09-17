@@ -19,7 +19,8 @@ class Api::V1::BookingsController < ApplicationController
     @booking = @client.bookings.new(booking_params)
     # binding.pry
     if @client.save
-      render json: ClientSerializer.new(@client).serialized_json
+      @bookings = current_client.bookings
+      render json: BookingSerializer.new(@bookings)
     else
       render json: @booking.errors, status: :unprocessable_entity
     end
