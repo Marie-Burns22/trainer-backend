@@ -17,7 +17,7 @@ class Api::V1::BookingsController < ApplicationController
   def create
     @client = current_client
     @booking = @client.bookings.new(booking_params)
-    # binding.pry
+
     if @client.save
       @bookings = current_client.bookings
       render json: BookingSerializer.new(@bookings)
