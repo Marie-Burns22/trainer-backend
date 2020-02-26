@@ -19,6 +19,8 @@ gem "puma", ">= 3.12.2"
 gem 'bcrypt', '~> 3.1.7'
 gem 'pry'
 gem "nokogiri", ">= 1.10.8"
+gem "loofah", ">= 2.3.1"
+
 
 
 # Use ActiveStorage variant
